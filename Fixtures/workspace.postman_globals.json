@@ -1,0 +1,57 @@
+{
+	"id": "47d8aff2-ca48-4977-8d4f-5b6be9ba96e1",
+	"values": [
+		{
+			"key": "oro_app_url",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_client_id",
+			"value": "my_client_id",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_client_secret",
+			"value": "my_client_secret",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_username",
+			"value": "guest",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_password",
+			"value": "guest",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_debug_mode",
+			"value": "fail",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_grant_type",
+			"value": "client_credentials",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "oro_access_token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-10-04T15:46:02.079Z",
+	"_postman_exported_using": "Postman/10.18.11"
+}
