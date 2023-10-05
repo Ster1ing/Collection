@@ -63,7 +63,7 @@ components:
   securitySchemes:    
     OAuth2:    # <---- arbitrary name
       type: oauth2
-      description: This API uses OAuth 2 with the ClientCredentials grant flow. [More info](https://api.example.com/docs/auth)
+      description: This API uses OAuth 2 with the ClientCredentials grant flow.
       flows:
         clientCredentials:   # <---- OAuth flow(authorizationCode, implicit, password or clientCredentials)
           tokenUrl: /oauth2-token
