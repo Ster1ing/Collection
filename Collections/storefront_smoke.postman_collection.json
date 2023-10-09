@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e557515c-4633-4467-a502-0d35ef739b73",
+		"_postman_id": "e7b6afcc-a625-45e6-b04a-473af426426e",
 		"name": "CI Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "30221153",
-		"_collection_link": "https://oro-api-testing.postman.co/workspace/Oro-Storefront-API-testing~3031c469-5651-4ce1-afa0-b9c56f2129e7/collection/30221153-e557515c-4633-4467-a502-0d35ef739b73?action=share&source=collection_link&creator=30221153"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30291108"
 	},
 	"item": [
 		{
@@ -42,9 +41,17 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"grant_type\": \"password\",\r\n    \"client_id\":\"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}"
+							"raw": "{\r\n    \"grant_type\": \"{{oro_grant_type}}\",\r\n    \"client_id\":\"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\"\r\n}"
 						},
-						"url": "{{app_url}}/oauth2-token"
+						"url": {
+							"raw": "{{oro_app_url}}/oauth2-token",
+							"host": [
+								"{{oro_app_url}}"
+							],
+							"path": [
+								"oauth2-token"
+							]
+						}
 					},
 					"response": []
 				}
@@ -78,7 +85,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{api_url}}/countries"
+						"url": {
+							"raw": "{{api_url}}/countries",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
 					},
 					"response": []
 				},
@@ -87,7 +102,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{api_url}}/countries/AD"
+						"url": {
+							"raw": "{{api_url}}/countries/AD",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"countries",
+								"AD"
+							]
+						}
 					},
 					"response": []
 				},
@@ -96,7 +120,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{api_url}}/countries/ADr"
+						"url": {
+							"raw": "{{api_url}}/countries/ADr",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"countries",
+								"ADr"
+							]
+						}
 					},
 					"response": []
 				}
@@ -109,7 +142,7 @@
 						"exec": [
 							"pm.request.headers.add({key: \"Accept\", value: \"application/vnd.api+json\"});",
 							"pm.request.headers.add({key: \"X-Include\", value: \"totalCount\"});",
-							"pm.request.headers.add({key: \"Authorization\", value: pm.collectionVariables.get(\"Authorization\")});",
+							"pm.request.headers.add({key: \"Authorization\", value: pm.collectionVariables.get(\"oro_auth_n\")});",
 							""
 						]
 					}
@@ -162,12 +195,12 @@
 	],
 	"variable": [
 		{
-			"key": "api_url",
-			"value": "{{app_url}}/api",
+			"key": "oro_api_url",
+			"value": "{{oro_app_url}}/api",
 			"type": "string"
 		},
 		{
-			"key": "Authorization",
+			"key": "oro_auth_n",
 			"value": ""
 		}
 	]
