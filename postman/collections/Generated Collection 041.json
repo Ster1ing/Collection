@@ -1,0 +1,888 @@
+{
+	"info": {
+		"_postman_id": "af577855-eecd-4edb-a751-2d97e9bd5d30",
+		"name": "Generated Collection 041",
+		"description": "Out-of-the-box, the framework opens REST API that conforms the JSON:API specification and enables CRUD operations support for the application ORM entities.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30291108-af577855-eecd-4edb-a751-2d97e9bd5d30"
+	},
+	"item": [
+		{
+			"name": "addresstypes",
+			"item": [
+				{
+					"name": "Get options",
+					"id": "13103c87-edf0-4368-9fae-fee580748ebe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"description": "To specify another locale, use the X-Localization-ID request header.",
+								"key": "X-Localization-ID",
+								"value": "1"
+							},
+							{
+								"description": "To specify another currency, use the X-Currency request header.",
+								"key": "X-Currency",
+								"value": "USD"
+							},
+							{
+								"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+								"key": "X-Product-ID",
+								"value": "SKU"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "9a825af6-d89e-4a26-8f3b-294b4aa9df42",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"disabled": false,
+									"description": {
+										"content": "The Allow header lists the set of methods supported by a resource.",
+										"type": "text/plain"
+									},
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								}
+							],
+							"cookie": []
+						},
+						{
+							"id": "201bb2d1-942f-4691-8784-5a7d983481bf",
+							"name": "Returned when no permissions to get the entities",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"est proident\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    },\n    {\n      \"status\": \"esse sit\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "2d9fe15d-1e75-43e0-99af-167f858ea1b4",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"eiusmod amet nostrud dolore incididunt\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    },\n    {\n      \"status\": \"Excepteur officia labore ut\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Address Types",
+					"id": "a3f382a3-c765-4c0a-a36a-e8f7ba0a9afe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "To specify another locale, use the X-Localization-ID request header.",
+								"key": "X-Localization-ID",
+								"value": "1"
+							},
+							{
+								"description": "To specify another currency, use the X-Currency request header.",
+								"key": "X-Currency",
+								"value": "USD"
+							},
+							{
+								"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+								"key": "X-Product-ID",
+								"value": "SKU"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							]
+						},
+						"description": "Retrieve a collection of address type records"
+					},
+					"response": [
+						{
+							"id": "622e8f9d-4ffb-42ba-9e0f-4be4e41ba22b",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    },\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    }\n  ]\n}"
+						},
+						{
+							"id": "7f7e0649-56c4-4d68-8d14-8492f275bddf",
+							"name": "Returned when no permissions to get the entities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"est proident\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    },\n    {\n      \"status\": \"esse sit\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "49f87801-ca2f-4bf3-a5ff-3b9df0366677",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1"
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD"
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"eiusmod amet nostrud dolore incididunt\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    },\n    {\n      \"status\": \"Excepteur officia labore ut\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get options",
+					"id": "e63dce04-4115-4800-8b32-1d8fd1da5e22",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "X-Include",
+								"value": "noHateoas"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "Excepteur non"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "af31f04e-190c-48fb-93b2-f614df0e711b",
+							"name": "Get communication options for a resource",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "Excepteur non"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "GET a addresstypes",
+					"id": "e272152f-e173-4266-a063-20ee62093f69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Include",
+								"value": "noHateoas"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "Excepteur non"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Retrieve a specific address type record"
+					},
+					"response": [
+						{
+							"id": "ffc127d0-9ad7-43d8-b084-1e945a124610",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "Excepteur non"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"type\": \"addresstypes\",\n    \"id\": \"billing\",\n    \"attributes\": {\n      \"label\": \"Billing\"\n    }\n  }\n}"
+						},
+						{
+							"id": "7ec2bcaa-a7ae-4d46-a3b0-afde4dbcac71",
+							"name": "Returned when no permissions to get the entity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "Excepteur non"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"est proident\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    },\n    {\n      \"status\": \"esse sit\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "a73ec15c-186b-45f9-b83b-2eb53759a816",
+							"name": "Returned when the entity is not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "Excepteur non"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"ad dolore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"sunt dolor\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "d66ff835-237f-4d12-a770-459106e96995",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=Excepteur non",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "Excepteur non"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"eiusmod amet nostrud dolore incididunt\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    },\n    {\n      \"status\": \"Excepteur officia labore ut\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "767b6d62-371b-4cbf-893c-93341d6a01ff",
+			"description": "Represent address type (e.g., shipping address, billing address, default shipping address, default billing address)"
+		},
+		{
+			"name": "countries",
+			"item": [
+				{
+					"name": "/api/countries/",
+					"id": "b73aa60f-8c3a-4dfc-851d-466e16b8099f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/countries/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"countries",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "db329c2a-c662-49c0-b5ce-876581484778",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/countries/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"countries",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"type\": \"countries\",\n      \"id\": \"AD\",\n      \"attributes\": {\n        \"iso3Code\": \"AND\",\n        \"name\": \"Andorra\"\n      },\n      \"relationships\": {\n        \"regions\": {\n          \"data\": [\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            },\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"type\": \"countries\",\n      \"id\": \"AD\",\n      \"attributes\": {\n        \"iso3Code\": \"AND\",\n        \"name\": \"Andorra\"\n      },\n      \"relationships\": {\n        \"regions\": {\n          \"data\": [\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            },\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "ab054bcd-4574-44ba-a199-1458b93aee44",
+			"description": "A country represents an element of an address record"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "/oauth2-token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "1376030f-7fdc-4dc7-a799-b25536736674",
+			"key": "baseUrl",
+			"value": "https://otarakanov-universal1.rcbuild8.dev.oroinc.com"
+		}
+	]
+}

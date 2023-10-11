@@ -1,0 +1,947 @@
+{
+	"info": {
+		"_postman_id": "1acb0288-cb98-4706-84e0-ca6b6f5feb26",
+		"name": "Generated Collection 046",
+		"description": "Out-of-the-box, the framework opens REST API that conforms the JSON:API specification and enables CRUD operations support for the application ORM entities.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30291108-1acb0288-cb98-4706-84e0-ca6b6f5feb26"
+	},
+	"item": [
+		{
+			"name": "addresstypes",
+			"item": [
+				{
+					"name": "Get options",
+					"id": "472086f6-99a5-4540-87a1-17260cda04e1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "fe7cfa55-b812-43ed-af1e-646be4d106ab",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"disabled": true,
+									"description": {
+										"content": "The Allow header lists the set of methods supported by a resource.",
+										"type": "text/plain"
+									},
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								}
+							],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Get Address Types",
+					"id": "0939b2e8-6940-4400-bdeb-d73bd0550558",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "To specify another locale, use the X-Localization-ID request header.",
+								"key": "X-Localization-ID",
+								"value": "1",
+								"disabled": true
+							},
+							{
+								"description": "To specify another currency, use the X-Currency request header.",
+								"key": "X-Currency",
+								"value": "USD",
+								"disabled": true
+							},
+							{
+								"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+								"key": "X-Product-ID",
+								"value": "SKU",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							],
+							"query": [
+								{
+									"description": "Filter records by the identifier field",
+									"key": "filter[id]",
+									"value": "AD",
+									"disabled": true
+								},
+								{
+									"description": "Filter records by 'label' field.",
+									"key": "filter[label]",
+									"value": "Billing",
+									"disabled": true
+								},
+								{
+									"description": "A list of fields of 'addresstypes' entity that will be returned in the response.",
+									"key": "fields[addresstypes]",
+									"value": "label",
+									"disabled": true
+								},
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names.",
+									"key": "meta",
+									"value": "property1,property2",
+									"disabled": true
+								},
+								{
+									"description": "The page number, starting from 1.",
+									"key": "page[number]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"description": "The number of items per page.",
+									"key": "page[size]",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"description": "Result sorting. Comma-separated fields, e.g. 'field1,-field2'.",
+									"key": "sort",
+									"value": "id,-name",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Retrieve a collection of address type records"
+					},
+					"response": [
+						{
+							"id": "1b4b664e-a53f-4d6f-b168-91d41c6cb4d1",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1",
+										"disabled": true
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD",
+										"disabled": true
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									],
+									"query": [
+										{
+											"description": "Filter records by the identifier field",
+											"key": "filter[id]",
+											"value": "AD",
+											"disabled": true
+										},
+										{
+											"description": "Filter records by 'label' field.",
+											"key": "filter[label]",
+											"value": "Billing",
+											"disabled": true
+										},
+										{
+											"description": "A list of fields of 'addresstypes' entity that will be returned in the response.",
+											"key": "fields[addresstypes]",
+											"value": "label",
+											"disabled": true
+										},
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names.",
+											"key": "meta",
+											"value": "property1,property2",
+											"disabled": true
+										},
+										{
+											"description": "The page number, starting from 1.",
+											"key": "page[number]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"description": "The number of items per page.",
+											"key": "page[size]",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"description": "Result sorting. Comma-separated fields, e.g. 'field1,-field2'.",
+											"key": "sort",
+											"value": "id,-name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    },\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    }\n  ]\n}"
+						},
+						{
+							"id": "708a8bdb-a96f-4a27-b23a-37e3ec6968fa",
+							"name": "Returned when no permissions to get the entities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1",
+										"disabled": true
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD",
+										"disabled": true
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									],
+									"query": [
+										{
+											"description": "Filter records by the identifier field",
+											"key": "filter[id]",
+											"value": "AD",
+											"disabled": true
+										},
+										{
+											"description": "Filter records by 'label' field.",
+											"key": "filter[label]",
+											"value": "Billing",
+											"disabled": true
+										},
+										{
+											"description": "A list of fields of 'addresstypes' entity that will be returned in the response.",
+											"key": "fields[addresstypes]",
+											"value": "label",
+											"disabled": true
+										},
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names.",
+											"key": "meta",
+											"value": "property1,property2",
+											"disabled": true
+										},
+										{
+											"description": "The page number, starting from 1.",
+											"key": "page[number]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"description": "The number of items per page.",
+											"key": "page[size]",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"description": "Result sorting. Comma-separated fields, e.g. 'field1,-field2'.",
+											"key": "sort",
+											"value": "id,-name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"laborum ut\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    },\n    {\n      \"status\": \"quis ipsum nostrud in\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "99ae6081-cf0b-4c69-a230-3df7b4afa042",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "To specify another locale, use the X-Localization-ID request header.",
+										"key": "X-Localization-ID",
+										"value": "1",
+										"disabled": true
+									},
+									{
+										"description": "To specify another currency, use the X-Currency request header.",
+										"key": "X-Currency",
+										"value": "USD",
+										"disabled": true
+									},
+									{
+										"description": "The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.",
+										"key": "X-Product-ID",
+										"value": "SKU",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									],
+									"query": [
+										{
+											"description": "Filter records by the identifier field",
+											"key": "filter[id]",
+											"value": "AD",
+											"disabled": true
+										},
+										{
+											"description": "Filter records by 'label' field.",
+											"key": "filter[label]",
+											"value": "Billing",
+											"disabled": true
+										},
+										{
+											"description": "A list of fields of 'addresstypes' entity that will be returned in the response.",
+											"key": "fields[addresstypes]",
+											"value": "label",
+											"disabled": true
+										},
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names.",
+											"key": "meta",
+											"value": "property1,property2",
+											"disabled": true
+										},
+										{
+											"description": "The page number, starting from 1.",
+											"key": "page[number]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"description": "The number of items per page.",
+											"key": "page[size]",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"description": "Result sorting. Comma-separated fields, e.g. 'field1,-field2'.",
+											"key": "sort",
+											"value": "id,-name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"qui dolore ea est\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    },\n    {\n      \"status\": \"in est labore fugiat laboris\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get options",
+					"id": "13aee660-ff6b-48b4-b282-24cce47f7b28",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "X-Include",
+								"value": "noHateoas",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "eu",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "5b55486f-811d-4008-b9dc-1b4133589e72",
+							"name": "Get communication options for a resource",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas",
+										"disabled": true
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "eu",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "GET a addresstypes",
+					"id": "6bf5ea89-ff46-4d5d-bc29-8b640f2c6cb6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Include",
+								"value": "noHateoas",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "eu",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Retrieve a specific address type record"
+					},
+					"response": [
+						{
+							"id": "40e08378-288f-464e-ae27-62d24eff5c4c",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "eu",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"type\": \"addresstypes\",\n    \"id\": \"billing\",\n    \"attributes\": {\n      \"label\": \"Billing\"\n    }\n  }\n}"
+						},
+						{
+							"id": "85fec957-6a7a-4a63-b326-f8b8be091eb2",
+							"name": "Returned when no permissions to get the entity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "eu",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"laborum ut\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    },\n    {\n      \"status\": \"quis ipsum nostrud in\",\n      \"title\": \"access denied exception\",\n      \"detail\": \"No access to this type of entities.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "87eb4961-b94f-4189-ac09-4d8c07b4affb",
+							"name": "Returned when the entity is not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "eu",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"pariatur\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"la\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "a3a1c6b9-9a47-44a1-9c6f-bb24d31bdd13",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Include",
+										"value": "noHateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "eu",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"qui dolore ea est\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    },\n    {\n      \"status\": \"in est labore fugiat laboris\",\n      \"title\": \"unexpected value exception\",\n      \"detail\": \"Expected an array of strings. Given null\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "bb98772c-c57d-4fba-8a31-27657dbf143e",
+			"description": "Represent address type (e.g., shipping address, billing address, default shipping address, default billing address)"
+		},
+		{
+			"name": "countries",
+			"item": [
+				{
+					"name": "/api/countries/",
+					"id": "a87cc615-0791-437c-9cf0-9f7cb4b6fb8a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/countries/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"countries",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8809106a-b64d-4357-ba8a-d9ffe584246b",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/countries/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"countries",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"type\": \"countries\",\n      \"id\": \"AD\",\n      \"attributes\": {\n        \"iso3Code\": \"AND\",\n        \"name\": \"Andorra\"\n      },\n      \"relationships\": {\n        \"regions\": {\n          \"data\": [\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            },\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"type\": \"countries\",\n      \"id\": \"AD\",\n      \"attributes\": {\n        \"iso3Code\": \"AND\",\n        \"name\": \"Andorra\"\n      },\n      \"relationships\": {\n        \"regions\": {\n          \"data\": [\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            },\n            {\n              \"type\": \"regions\",\n              \"id\": \"AD-02\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "55b2078e-f9c7-4117-8bd6-06787af0590d",
+			"description": "A country represents an element of an address record"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "/oauth2-token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "75484763-b622-4722-8fe0-4a44f6371dc3",
+			"key": "baseUrl",
+			"value": "https://otarakanov-universal1.rcbuild8.dev.oroinc.com"
+		}
+	]
+}

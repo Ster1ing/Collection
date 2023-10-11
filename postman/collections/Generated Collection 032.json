@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "9d5c6679-0779-4848-b749-cbd81b11d5a9",
+		"name": "Generated Collection 032",
+		"description": "Out-of-the-box, the framework opens REST API that conforms the JSON:API specification and enables CRUD operations support for the application ORM entities.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30291108-9d5c6679-0779-4848-b749-cbd81b11d5a9"
+	},
+	"item": [
+		{
+			"name": "addresstypes",
+			"item": [
+				{
+					"name": "/api/addresstypes",
+					"id": "93d4c033-6673-4e96-8165-5e5839d91522",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "bceb102a-4b0b-4ba1-9493-24c88d7d2440",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "5c6ca9b1-7029-4684-8787-5672dda77b0b",
+							"name": "Returned when no permissions to get the entities",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "d3c815c2-5205-4ce5-add0-89cd5894d974",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/addresstypes",
+					"id": "ddac4bd3-363e-4f6c-a7c3-91c2d8edee3c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes"
+							]
+						},
+						"description": "Retrieve a collection of address type records"
+					},
+					"response": [
+						{
+							"id": "41c8c594-a405-4c05-9cd9-5bcca6cd0f37",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    },\n    {\n      \"type\": \"addresstypes\",\n      \"id\": \"billing\",\n      \"attributes\": {\n        \"label\": \"Billing\"\n      }\n    }\n  ]\n}"
+						},
+						{
+							"id": "abe74506-185d-49a0-9fc7-7ed67e1a5825",
+							"name": "Returned when no permissions to get the entities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "997ad01a-dd0b-4644-93de-73e92007fdbb",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/addresstypes/:id",
+					"id": "85c8ba5c-ff55-4fd3-a990-bdbc56b258fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "id nulla"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Get communication options for a resource"
+					},
+					"response": [
+						{
+							"id": "380092d6-c315-4f2e-9dd8-bf1ca3140836",
+							"name": "Get communication options for a resource",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "id nulla"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "/api/addresstypes/:id",
+					"id": "eb486636-79af-4872-bee7-26a8f950b065",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addresstypes",
+								":id"
+							],
+							"query": [
+								{
+									"description": "A list of meta properties to be returned. Comma-separated names",
+									"key": "meta",
+									"value": "id nulla"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "billing"
+								}
+							]
+						},
+						"description": "Retrieve a specific address type record"
+					},
+					"response": [
+						{
+							"id": "6de682be-8b13-4b27-89a4-7f8bcf9e9b2a",
+							"name": "Returned when successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "id nulla"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"type\": \"addresstypes\",\n    \"id\": \"billing\",\n    \"attributes\": {\n      \"label\": \"Billing\"\n    }\n  }\n}"
+						},
+						{
+							"id": "dda9565c-d906-4783-b56b-570ff4707271",
+							"name": "Returned when no permissions to get the entity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "id nulla"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "4835eba1-0113-429a-b27b-f93a9b03736d",
+							"name": "Returned when the entity is not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "id nulla"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "d54a60dd-e6d8-4eeb-abcd-109d4835ec6d",
+							"name": "Returned when an unexpected error occurs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: oauth2",
+										"key": "Authorization",
+										"value": "<token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes/:id?meta=id nulla",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes",
+										":id"
+									],
+									"query": [
+										{
+											"description": "A list of meta properties to be returned. Comma-separated names",
+											"key": "meta",
+											"value": "id nulla"
+										}
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errors\": [\n    {\n      \"status\": \"Duis fugiat ad\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    },\n    {\n      \"status\": \"dolor labore\",\n      \"title\": \"not found http exception\",\n      \"detail\": \"An entity with the requested identifier does not exist.\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "19a28b47-ee4f-439a-bd86-4dd74b5a5141",
+			"description": "Represent address type (e.g., shipping address, billing address, default shipping address, default billing address)"
+		},
+		{
+			"name": "countries",
+			"item": [],
+			"id": "0ed66c0e-f384-4bab-9c1d-99f05b6b3a4d",
+			"description": "A country represents an element of an address record"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "/oauth2-token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "62763022-c19d-48cf-a635-fb96f85eb792",
+			"key": "baseUrl",
+			"value": "https://otarakanov-universal-master.rcbuild8.dev.oroinc.com/api"
+		}
+	]
+}

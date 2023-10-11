@@ -1,0 +1,79 @@
+parameters:
+  - name: X-Localization-ID
+    description: To specify another locale, use the X-Localization-ID request header.
+    in: header
+    required: false        
+    schema:
+      type: string
+      example: 1
+  - name: X-Currency
+    description: To specify another currency, use the X-Currency request header.
+    in: header
+    required: false        
+    schema:
+      type: string
+      example: USD
+  - name: X-Product-ID
+    description: The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.
+    in: header
+    required: false        
+    schema:
+      type: string
+      example: SKU
+
+  - name: filter[id]
+    in: query
+    schema:
+      type: string
+      example: AD
+      default: AD
+    required: false
+    description: Filter records by the identifier field  
+  - name: filter[label]
+    in: query
+    schema:
+      type: string
+      example: Billing
+      default: Billing
+    required: false
+    description: Filter records by 'label' field.
+  - name: fields[addresstypes]
+    in: query
+    schema:
+      type: string
+      example: label
+      default: label
+    required: false
+    description: A list of fields of 'addresstypes' entity that will be returned in the response.
+  - name: meta
+    in: query
+    schema:
+      type: string
+      example: property1,property2          
+    required: false
+    description: A list of meta properties to be returned. Comma-separated names.
+                            
+  - name: page[number]
+    in: query
+    schema:
+      type: integer
+      example: 1
+      default: 1
+    required: false
+    description: The page number, starting from 1.
+  - name: page[size]
+    in: query
+    schema:
+      type: integer
+      example: 10
+      default: 10
+    required: false
+    description: The number of items per page.
+  - name: sort
+    in: query
+    schema:
+      type: string
+      example: id,-name
+      default: id
+    required: false
+    description: Result sorting. Comma-separated fields, e.g. 'field1,-field2'. 

@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "add7e3b6-aeae-495f-b071-df385ac8d674",
+		"name": "GC 035",
+		"description": "Out-of-the-box, the framework opens REST API that conforms the JSON:API specification and enables CRUD operations support for the application ORM entities.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30291108-add7e3b6-aeae-495f-b071-df385ac8d674"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "addresstypes",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get options",
+									"id": "0321aec2-1a42-482e-8a48-9154d0df5bef",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes",
+												":id"
+											],
+											"query": [
+												{
+													"description": "A list of meta properties to be returned. Comma-separated names",
+													"key": "meta",
+													"value": "<string>"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Get communication options for a resource"
+									},
+									"response": [
+										{
+											"id": "e329a1f2-68b3-44c8-ab8d-9582e7adb3ad",
+											"name": "Get communication options for a resource",
+											"originalRequest": {
+												"method": "OPTIONS",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"addresstypes",
+														":id"
+													],
+													"query": [
+														{
+															"description": "A list of meta properties to be returned. Comma-separated names",
+															"key": "meta",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
+										}
+									]
+								},
+								{
+									"name": "GET a addresstypes",
+									"id": "d88b85bc-7e2b-444e-a69f-b2cd8b37973b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes",
+												":id"
+											],
+											"query": [
+												{
+													"description": "A list of meta properties to be returned. Comma-separated names",
+													"key": "meta",
+													"value": "<string>"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Retrieve a specific address type record"
+									},
+									"response": [
+										{
+											"id": "2aea5986-adf4-452f-8b4e-b64057dbf5b9",
+											"name": "Returned when successful",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/vnd.api+json"
+													},
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"addresstypes",
+														":id"
+													],
+													"query": [
+														{
+															"description": "A list of meta properties to be returned. Comma-separated names",
+															"key": "meta",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/vnd.api+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {\n      \"label\": \"<string>\"\n    }\n  }\n}"
+										},
+										{
+											"id": "c491cee7-e704-4831-bc2a-dffb69b4e018",
+											"name": "Returned when no permissions to get the entity",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/vnd.api+json"
+													},
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"addresstypes",
+														":id"
+													],
+													"query": [
+														{
+															"description": "A list of meta properties to be returned. Comma-separated names",
+															"key": "meta",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/vnd.api+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"id": "19b025ec-c815-4f4e-afcf-e2dc615f0063",
+											"name": "Returned when the entity is not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/vnd.api+json"
+													},
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"addresstypes",
+														":id"
+													],
+													"query": [
+														{
+															"description": "A list of meta properties to be returned. Comma-separated names",
+															"key": "meta",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/vnd.api+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"id": "bd30cdce-8aaf-41d3-85c7-da464d48e92e",
+											"name": "Returned when an unexpected error occurs",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/vnd.api+json"
+													},
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/addresstypes/:id?meta=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"addresstypes",
+														":id"
+													],
+													"query": [
+														{
+															"description": "A list of meta properties to be returned. Comma-separated names",
+															"key": "meta",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/vnd.api+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "971c602b-d7a8-4bef-bc19-b1d11b9e9aad"
+						},
+						{
+							"name": "Get options",
+							"id": "93574fc3-7827-4c43-aff9-e4066528c61f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								},
+								"description": "Get communication options for a resource"
+							},
+							"response": [
+								{
+									"id": "edd4377e-8a13-4d75-a59e-9b3874cb8b91",
+									"name": "Returned when successful",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								},
+								{
+									"id": "36d2948f-9b2b-4968-ab52-82445b5f595d",
+									"name": "Returned when no permissions to get the entities",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "33119bdb-69cd-4154-8509-7d6e95517774",
+									"name": "Returned when an unexpected error occurs",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Address Types",
+							"id": "1b7ee33c-b703-45bb-acd9-5f47f7910b41",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/addresstypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"addresstypes"
+									]
+								},
+								"description": "Retrieve a collection of address type records"
+							},
+							"response": [
+								{
+									"id": "18149e3d-ca82-44a6-b8fd-dcf6ef292794",
+									"name": "Returned when successful",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {\n        \"label\": \"<string>\"\n      }\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {\n        \"label\": \"<string>\"\n      }\n    }\n  ]\n}"
+								},
+								{
+									"id": "6df17f81-75fa-458a-a6fa-23868ec0fb5d",
+									"name": "Returned when no permissions to get the entities",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "0790e4e2-b7e9-4b04-8a3c-8898030c0b69",
+									"name": "Returned when an unexpected error occurs",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/addresstypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"addresstypes"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"errors\": [\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    },\n    {\n      \"status\": \"<string>\",\n      \"title\": \"<string>\",\n      \"detail\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "3c182a7b-21e3-4e19-b799-2960e1746750"
+				}
+			],
+			"id": "b03d22cc-6a41-4484-a554-51bd0c0019c1"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "/oauth2-token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "40638ec6-e4f1-42b9-aaa4-ed71465da7c2",
+			"key": "baseUrl",
+			"value": "https://otarakanov-universal-master.rcbuild8.dev.oroinc.com/api"
+		}
+	]
+}

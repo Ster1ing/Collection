@@ -1,79 +1,432 @@
 openapi: 3.0.0
 info:
-  version: 1.0.0
+  version: 1.0.1
   title: ORO Storefront Sample API
   description: Out-of-the-box, the framework opens REST API that conforms the JSON:API specification and enables CRUD operations support for the application ORM entities.
 servers:
-- url: https://otarakanov-universal-master.rcbuild8.dev.oroinc.com/api
-  description: Universal-master
-- url: https://otarakanov-universal1.rcbuild8.dev.oroinc.com/api
+- url: https://otarakanov-universal1.rcbuild8.dev.oroinc.com
   description: Universal-1
-paths:
+- url: https://otarakanov-universal-master.rcbuild8.dev.oroinc.com
+  description: Universal-master
+- url: https://pen-test.oro-cloud.com
+  description: Pen-test Oro-cloud
+tags:
+  - name: addresstypes
+    description: Represent address type (e.g., shipping address, billing address, default shipping address, default billing address)
+    externalDocs:
+      description: Find out more
+      url: https://doc.oroinc.com
+  - name: countries
+    description: A country represents an element of an address record
+    externalDocs:
+      description: Find out more
+      url: https://doc.oroinc.com
+paths:  
+  /api/addresstypes:    
+    options:      
+      tags:
+      - addresstypes
+      summary: Get options
+      description: Get communication options for a resource
+      responses: 
+        '200':
+          description: Returned when successful
+          headers:
+            Allow:
+              schema:
+                type: string
+                example: OPTIONS, GET
+              description: The Allow header lists the set of methods supported by a resource.        
+    get:
+      parameters:
+      - name: X-Localization-ID
+        description: To specify another locale, use the X-Localization-ID request header.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: 1
+      - name: X-Currency
+        description: To specify another currency, use the X-Currency request header.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: USD
+      - name: X-Product-ID
+        description: The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: SKU
+      - name: filter[id]
+        in: query
+        schema:
+          type: string
+          example: AD
+          default: AD
+        required: false
+        description: Filter records by the identifier field  
+      - name: filter[label]
+        in: query
+        schema:
+          type: string
+          example: Billing
+          default: Billing
+        required: false
+        description: Filter records by 'label' field.
+      - name: fields[addresstypes]
+        in: query
+        schema:
+          type: string
+          example: label
+          default: label
+        required: false
+        description: A list of fields of 'addresstypes' entity that will be returned in the response.
+      - name: meta
+        in: query
+        schema:
+          type: string
+          example: property1,property2          
+        required: false
+        description: A list of meta properties to be returned. Comma-separated names.                        
+      - name: page[number]
+        in: query
+        schema:
+          type: integer
+          example: 1
+          default: 1
+        required: false
+        description: The page number, starting from 1.
+      - name: page[size]
+        in: query
+        schema:
+          type: integer
+          example: 10
+          default: 10
+        required: false
+        description: The number of items per page.
+      - name: sort
+        in: query
+        schema:
+          type: string
+          example: id,-name
+          default: id
+        required: false
+        description: Result sorting. Comma-separated fields, e.g. 'field1,-field2'.      
+      tags:
+        - addresstypes
+      summary: Get Address Types
+      description: Retrieve a collection of address type records
+      responses:
+        '200':
+          description: Returned when successful
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/addresstypes'
+        '403':
+          description: Returned when no permissions to get the entities
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/error403'
+        '500':
+          description: Returned when an unexpected error occurs
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/error500'
   /api/addresstypes/{id}:
     parameters:
       - name: id
         description: The unique identifier of a resource
         in: path
-        required: true
+        required: true        
         schema:
-          $ref: '#/components/schemas/id'
+          $ref: '#/components/schemas/addresstypeId/properties/data/properties/id'
+      - name: X-Localization-ID
+        description: To specify another locale, use the X-Localization-ID request header.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: 1
+      - name: X-Currency
+        description: To specify another currency, use the X-Currency request header.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: USD
+      - name: X-Product-ID
+        description: The X-Product-ID request header with the sku value is used to switch to SKU as the identifier.
+        in: header
+        required: false        
+        schema:
+          type: string
+          example: SKU
+      - name: fields[addresstypes]
+        in: query
+        schema:
+          type: string
+          example: label
+          default: label
+        required: false
+        description: A list of fields of 'addresstypes' entity that will be returned in the response.
+      - name: meta
+        in: query
+        schema:
+          type: string
+          example: property1,property2          
+        required: false
+        description: A list of meta properties to be returned. Comma-separated names.          
+    options:
+      tags:
+        - addresstypes
+      summary: Get options
+      description: Get communication options for a resource
+      responses: 
+        '200':
+          description: Get communication options for a resource
     get:
+      tags:
+        - addresstypes
       summary: GET a addresstypes
+      description: Retrieve a specific address type record
       responses:
         '200':
-          description: Retrieve a specific address type record.
+          description: Returned when successful
           content:
-            application/json:
+            application/vnd.api+json:
               schema:
-                $ref: '#/components/schemas/addresstype'
+                $ref: '#/components/schemas/addresstypeId'
+        '403':
+          description: Returned when no permissions to get the entity
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/error403'
         '404':
-          description: No addresstypes found for the provided `id`
+          description: Returned when the entity is not found
           content:
-            application/json:
+            application/vnd.api+json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: '#/components/schemas/error404'
         '500':
-          description: Unexpected error
+          description: Returned when an unexpected error occurs
           content:
-            application/json:
+            application/vnd.api+json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: '#/components/schemas/error500'
+  /api/countries/:
+    options:
+      tags:
+        -  countries
+      responses:
+        '200':
+          description: Returned when successful
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/countries'  
 components:
   schemas:
-    id:
-      description: The unique identifier of a resource
-      type: string
-    addresstype:
+    addresstypeId:
       type: object
-      required:
-        - id
       properties:
-        id:
-          $ref: '#/components/schemas/id'
-        label:
-          type: string
-    Error:
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+              example: addresstypes
+            id:
+              type: string
+              example: billing
+            attributes:
+              type: object
+              properties:
+                label:
+                  type: string
+                  example: Billing
+              required:
+              - label
+          required:
+          - type
+          - id
+          - attributes
+      required:
+      - data
+    addresstypes:
       type: object
-      required:
-        - message
       properties:
-        message:
-          description: A human readable error message
-          type: string
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: addresstypes
+              id:
+                type: string
+                example: billing
+              attributes:
+                type: object
+                properties:
+                  label:
+                    type: string
+                    example: Billing
+                required:
+                - label
+            required:
+            - type
+            - id
+            - attributes
+      required:
+      - data
+    countries:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: countries
+              id:
+                type: string
+                example: AD
+              attributes:
+                type: object
+                properties:
+                  iso3Code:
+                    type: string
+                    example: AND
+                  name:
+                    type: string
+                    example: Andorra
+                required:
+                - iso3Code
+                - name
+              relationships:
+                type: object
+                properties:
+                  regions:
+                    type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                              example: regions
+                            id:
+                              type: string
+                              example: AD-02
+                          required:
+                          - type
+                          - id
+                    required:
+                    - data
+                required:
+                - regions
+            required:
+            - type
+            - id
+            - attributes
+            - relationships
+      required:
+      - data     
+    error403:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              status:
+                type: string
+                example: 403
+              title:
+                type: string
+                example: access denied exception
+              detail:
+                type: string
+                example: No access to this type of entities.
+            required:
+            - status
+            - title
+            - detail
+      required:
+      - errors
+    error404:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              status:
+                type: string
+                example: 404
+              title:
+                type: string
+                example: not found http exception
+              detail:
+                type: string
+                example: An entity with the requested identifier does not exist.
+            required:
+            - status
+            - title
+            - detail
+      required:
+      - errors
+    error500:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              status:
+                type: string
+                example: 500
+              title:
+                type: string
+                example: unexpected value exception
+              detail:
+                type: string
+                example: Expected an array of strings. Given null
+            required:
+            - status
+            - title
+            - detail
+      required:
+      - errors      
   securitySchemes:    
-    OAuth2:    # <---- arbitrary name
+    oauth2:
       type: oauth2
-      description: This API uses OAuth 2 with the ClientCredentials grant flow.
+      description: This API uses OAuth 2 with the multiple grant flows.
       flows:
-        clientCredentials:   # <---- OAuth flow(authorizationCode, implicit, password or clientCredentials)
+        clientCredentials:
           tokenUrl: /oauth2-token
           scopes: {}
-        authorizationCode:
-          authorizationUrl: /oauth2-token/authorize
-          tokenUrl: /oauth2-token
-          scopes: {}
-        password:   
-          tokenUrl: /oauth2-token
-          scopes: {}
+        #authorizationCode:
+        #  authorizationUrl: /oauth2-token/authorize
+        #  tokenUrl: /oauth2-token
+        #  scopes: {}
+        #password3:   
+        #  tokenUrl: /oauth2-token
+        #  scopes: {}
 security:
-  - OAuth2: []
+  - oauth2: []
